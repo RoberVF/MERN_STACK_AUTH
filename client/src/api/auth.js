@@ -9,3 +9,5 @@ export const registerRequest = async (user) => {
 
 }
 //Se da un usuario y se envia un POST con ese usuario :)
+
+export const loginRequest = user => axios.post(`${API}/login`, user)

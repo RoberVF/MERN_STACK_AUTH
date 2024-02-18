@@ -1,12 +1,15 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-function App(){
+import RegisterPage from './pages/RegisterPage'
+import LoginPage from './pages/LoginPage'
+
+function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<h1>Home Page</h1>} />
-        <Route path='/login' element={<h1>Login</h1>} />
-        <Route path='/register' element={<h1>Register</h1>} />
+        <Route path='/login' element={< LoginPage />} />
+        <Route path='/register' element={< RegisterPage />} />
         <Route path='/tasks' element={<h1>Tasks Page</h1>} />
         <Route path='/add-task' element={<h1>New Task</h1>} />
         <Route path='/tasks/:id' element={<h1>Update Task</h1>} />

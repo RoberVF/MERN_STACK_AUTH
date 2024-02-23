@@ -1,13 +1,15 @@
 //AXIOS -> Biblioteca que engloba fecths
-import axios from 'axios'
+import axios from './axios'
 
-const API = 'http://localhost:3000/api'
+// const API = 'http://localhost:3000/api'
 
 export const registerRequest = async (user) => {
 
-    return await axios.post(`${API}/register`, user)
+    return await axios.post("/register", user)
 
 }
 //Se da un usuario y se envia un POST con ese usuario :)
 
-export const loginRequest = user => axios.post(`${API}/login`, user)
+export const loginRequest = user => axios.post("/login", user)
+
+export const verifyTokenRequest = () => axios.get("/verify")

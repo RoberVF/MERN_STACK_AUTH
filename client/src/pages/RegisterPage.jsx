@@ -17,6 +17,10 @@ function RegisterPage() {
         signup(values)
     })
 
+    useEffect(() => {
+        if(isAuthenticated) navigate('/tasks')
+    }, [isAuthenticated])
+
     return (
         <div className='flex h-screen items-center justify-center'>
             <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>

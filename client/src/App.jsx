@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage'
 import TasksPage from './pages/TasksPage'
 import TasksFormPage from './pages/TasksFormPage'
 import ProfilePage from './pages/ProfilePage'
+import Navbar from './components/Navbar'
 
 import ProtectedRoute from './ProtectedRoute'
 
@@ -16,6 +17,7 @@ function App() {
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
+        <Navbar />
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/register' element={< RegisterPage />} />

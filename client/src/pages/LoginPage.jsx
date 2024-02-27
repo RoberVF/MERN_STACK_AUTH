@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useAuth } from '../context/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
+import { useEffect} from 'react'
 
 function LoginPage() {
 
@@ -41,11 +42,11 @@ function LoginPage() {
                     )}
 
                     <button type='submit'
-                        className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 mt-2 rounded w-full'>Login</button>
+                        className='bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 mt-2 rounded w-full'>Login</button>
                 </form>
                 <p className='flex mt-3 justify-between'>
                     Don't have an account? 
-                    <Link to="/register" className='text-purple-500 hover:text-purple-700'>Create it!</Link>
+                    <Link to="/register" className='text-indigo-500 hover:text-indigo-700'>Create it!</Link>
                 </p>
             </div>
         </div>

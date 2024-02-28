@@ -25,7 +25,7 @@ function RegisterPage() {
         <div className='flex h-screen items-center justify-center'>
             <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
             {
-                registerErrors.map((error, i) => (
+                Array.isArray(registerErrors) && registerErrors.length > 0 && registerErrors.map((error, i) => (
                     <div className='mt-2 bg-red-500 p-2 text-white rounded-md text-center' key={i}>{error}</div>
                 ))
             }

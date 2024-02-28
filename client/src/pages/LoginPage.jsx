@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useAuth } from '../context/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
-import { useEffect} from 'react'
+import { useEffect } from 'react'
 
 function LoginPage() {
 
@@ -14,14 +14,14 @@ function LoginPage() {
     })
 
     useEffect(() => {
-        if(isAuthenticated) navigate('/tasks')
+        if (isAuthenticated) navigate('/tasks')
     }, [isAuthenticated])
 
     return (
         <div className='flex h-screen items-center justify-center'>
             <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
                 {
-                    signinErrors && signinErrors.map((error, i) => (
+                    Array.isArray(signinErrors) && signinErrors.length > 0 && signinErrors.map((error, i) => (
                         <div className='mt-2 bg-red-500 p-2 text-white rounded-md text-center' key={i}>{error}</div>
                     ))
                 }
@@ -45,7 +45,7 @@ function LoginPage() {
                         className='bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 mt-2 rounded w-full'>Login</button>
                 </form>
                 <p className='flex mt-3 justify-between'>
-                    Don't have an account? 
+                    Don't have an account?
                     <Link to="/register" className='text-indigo-500 hover:text-indigo-700'>Create it!</Link>
                 </p>
             </div>

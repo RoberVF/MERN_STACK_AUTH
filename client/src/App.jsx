@@ -17,7 +17,9 @@ function App() {
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
+        <main className='lg:container mx-auto'>
         <Navbar />
+        <section className='px-5'>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/register' element={< RegisterPage />} />
@@ -31,6 +33,9 @@ function App() {
               <Route path='/profile' element={<ProfilePage />} />
             </Route>
           </Routes>
+        </section>
+        </main>
+        
         </BrowserRouter>
       </TaskProvider>
     </AuthProvider>

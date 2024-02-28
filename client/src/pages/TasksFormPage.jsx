@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useTasks } from '../context/TasksContext'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function TasksFormPage() {
 
@@ -28,9 +29,16 @@ function TasksFormPage() {
                         className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
                         {...register('description')} rows="3" placeholder="Description"></textarea>
                     <button
-                        className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 mt-2 rounded w-full'>
+                        className='bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 mt-2 rounded w-full'>
                         Save</button>
+                    <Link to="/tasks">
+                        <button
+                            className='bg-zinc-700 hover:bg-zinc-500 text-white font-bold py-2 px-4 mt-2 rounded w-full'>
+                            Return to tasks</button>
+
+                    </Link>
                 </form>
+
             </div >
         </div>
     )

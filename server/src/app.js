@@ -13,13 +13,12 @@ const app = express()
 
 
 
-/*app.use(cors({
+app.use(cors({
     origin: FRONTEND_URL,
     credentials: true
 })) //Permitir que las peticiones del frontend, que estan en otro dominio, se puedan comunicar con el backend
-*/
 
-app.use(cors()) // <<<< Esto no se debe hacer, es ilegalisimo !!!!!
+
 
 
 app.use(morgan('dev'))

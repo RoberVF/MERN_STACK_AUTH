@@ -15,7 +15,7 @@ const app = express()
 
 app.use(cors({
     // origin: FRONTEND_URL,
-    origin: 'https://task-manager-frontend-r9ow.onrender.com',
+    origin: 'http://localhost:5173',
     credentials: true,
     methods: 'GET,POST,PUT,DELETE'
 })) //Permitir que las peticiones del frontend, que estan en otro dominio, se puedan comunicar con el backend

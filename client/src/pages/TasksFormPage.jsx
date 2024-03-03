@@ -48,12 +48,12 @@ function TasksFormPage() {
                     <input
                         {...register('title')}
                         className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
-                        type="text" placeholder="Title" autoFocus />
+                        type="text" placeholder="Title" autoFocus name='title' />
 
                     <label htmlFor="description">Description</label>
                     <textarea
                         className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
-                        {...register('description')} rows="3" placeholder="Description"></textarea>
+                        {...register('description')} rows="3" placeholder="Description" name='description'></textarea>
                     
                     {/* <label htmlFor="date">Date</label>
                     <input 

@@ -16,7 +16,7 @@ const app = express()
 app.use(cors({
     // origin: FRONTEND_URL,
     AcceseControlAllowOrigin: '*',
-    origin: FRONTEND_URL || '*',
+    origin: '*',
     credentials: true,
     methods: 'GET,POST,PUT,DELETE'
 })) //Permitir que las peticiones del frontend, que estan en otro dominio, se puedan comunicar con el backend

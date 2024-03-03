@@ -26,13 +26,11 @@ export const register = async (req, res) => {
             id: userSaved._id
         })
 
-        const cookieOptions = {
+        res.cookie('token', token, {
             sameSite : 'None',
             secure : true,
-            // secure : process.env.NODE_ENV === 'production'
-        }
-
-        res.cookie('token', token, cookieOptions)
+            httpOnly: false
+        })
         res.json({
             id: userSaved._id,
             username: userSaved.username,

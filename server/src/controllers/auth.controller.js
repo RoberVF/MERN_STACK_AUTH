@@ -27,9 +27,9 @@ export const register = async (req, res) => {
         })
 
         res.cookie('token', token, {
-            sameSite : 'None',
+            sameSite : 'Lax',
             secure : true,
-            httpOnly: false
+            httpOnly: true
         })
         res.json({
             id: userSaved._id,
@@ -62,9 +62,9 @@ export const login = async (req, res) => {
         })
 
         res.cookie('token', token, {
-            sameSite: "none", //La cookie no esta en el mismo dominio
+            sameSite: "Lax", //La cookie no esta en el mismo dominio
             secure: true,
-            httpOnly: false
+            httpOnly: true
         })
         res.json({
             id: userFound._id,

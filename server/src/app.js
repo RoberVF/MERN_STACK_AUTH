@@ -21,7 +21,6 @@ app.use(express.urlencoded({extended:false}))
 
 //CORS
 const corsOptions = {
-    // origin: FRONTEND_URL || 'http://localhost:5173',
     origin: function(origin, callback){
         if(!origin || FRONTEND_URL === origin){
             callback(null, true)

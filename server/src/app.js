@@ -21,17 +21,11 @@ app.use(express.urlencoded({extended:false}))
 
 //CORS
 const corsOptions = {
-    origin: function(origin, callback){
-        if(!origin || FRONTEND_URL === origin){
-            callback(null, true)
-        } else{
-            callback(new Error("Not allowed by CORS Policity"))
-        }
-    },
-    credentials: true,
+    origin: "http://localhost:5173",
+    credentials: true
 }
 app.use(cors(corsOptions)) //Permitir que las peticiones del frontend, que estan en otro dominio, se puedan comunicar con el backend
-app.options("*", cors())
+app.options("*", cors(corsOptions))
 
 app.use("/api", authRoutes)
 app.use("/api", taskRoutes)
